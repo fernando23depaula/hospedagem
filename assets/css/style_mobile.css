@@ -5,6 +5,8 @@
   font-family: "Roboto", "Courier New", Courier, monospace;
 }
 
+
+
 :root {
   --color_white: #fff;
   --font_title: 1rem;
@@ -31,21 +33,46 @@
   width: 16px;
   height: 16px;
 }
-
+.fontZoom {
+  font-size: 40px;
+}
 .d-flex {
   display: flex;
 }
 /* Fim utils */
-
+#utilidades {
+  position: relative;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+#utilidades ul {
+  list-style-type: none;
+  display: flex;
+}
+#utilidades button {
+  border: 1px solid #d9d3d3;
+  padding: 14px;
+  background-color: #FFF;
+  font-weight: 500;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.75);
+}
+#utilidades small {
+  font-size: smaller;
+}
 #logo {
   max-width: 150px;
 }
 header.container {
   display: flex;
   justify-content: space-between;
-  padding: 17px 0;
+  padding: 17px;
 }
-
+header img {
+  max-width: 35px;
+}
 header nav ul {
   display: flex;
   height: 100%;
@@ -53,16 +80,21 @@ header nav ul {
 }
 header nav ul li {
   list-style-type: none;
-  margin: 0 5px;
+  display: flex;
+  margin: 0 0.5rem;
 }
 header nav ul li a {
-    text-decoration: none;
-    font-weight: 500;
-    color: var(--color_black)
+  display: flex;
+
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--color_black);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-header nav ul li a:hover{
-    opacity: 0.7;
-    text-decoration: underline;
+header nav ul li a:hover {
+  opacity: 0.7;
 }
 
 .banner {
@@ -131,19 +163,21 @@ section h2 {
   border-radius: 3px;
 }
 .card-hotel figure {
-    max-height: 165px;
-    overflow: hidden;
+  max-height: 165px;
+  overflow: hidden;
 }
 
-.card-hotel .nome{
-    font-weight: bold;
-    margin: 8px 0;
+.card-hotel .nome {
+  font-weight: bold;
+  margin: 8px 0;
 }
 
 .card-hotel .descricao p {
   margin: 10px 0;
   font-size: 0.5rem;
   min-height: 60px;
+  max-height: 70px;
+  overflow: hidden;
 }
 
 .avaliacao-box {
@@ -161,7 +195,11 @@ section h2 {
   cursor: pointer;
   border: none;
   border-radius: 5px;
+  text-decoration: none;
   padding: 10px;
+  background-color: #652d90;
+  font-weight: 500;
+  color: #fff;
 }
 .button-primary:hover {
   opacity: 0.7;
@@ -172,11 +210,24 @@ section h2 {
 }
 
 footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
 }
+@media screen and (max-width: 570px) {
+  .fontZoom {
+    font-size: 18px;
+  }
+ 
+}
+@media screen and (min-width:570px) and (max-width: 768px) { 
+  .fontZoom {
+    font-size: 20px;
+  }
+
+}
+
 @media screen and (max-width: 768px) {
   .center-items {
     display: flex;
@@ -184,7 +235,19 @@ footer {
     align-items: center;
     flex-direction: column;
   }
-  
+  header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+ 
+  .card-hotel .descricao p {
+    font-size: 1rem;
+  }
+  .offer{
+    font-size: 18px;
+  }
+
 }
 @media screen and (min-width: 768px) {
   html {
@@ -211,6 +274,7 @@ footer {
   .row-cards {
     grid-template-columns: repeat(3, minmax(auto, 1fr));
   }
+ 
 }
 
 @media screen and (min-width: 1200px) {
@@ -220,4 +284,5 @@ footer {
   .row-cards {
     grid-template-columns: repeat(4, minmax(auto, 1fr));
   }
+ 
 }
