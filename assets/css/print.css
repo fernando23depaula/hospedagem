@@ -1,0 +1,13 @@
+* {
+  -webkit-print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+  color-adjust: exact !important;
+}
+.row-cards {
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  grid-template-columns: repeat(2, auto);
+}
+header {
+  page-break-before: avoid;
+}

@@ -28,7 +28,7 @@
 }
 
 .star {
-  background-image: url("../images/estrela.png");
+  background-image: url("../images/estrela.png") no-repeat;
   display: inline-block;
   width: 16px;
   height: 16px;
